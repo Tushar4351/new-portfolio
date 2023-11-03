@@ -1,0 +1,16 @@
+---
+//component import
+import MainHead from "./MainHead.astro";
+import Navbar from "../components/Navbar.astro";
+const { title = "Tushar Bhowal" } = Astro.props;
+---
+
+<html lang="en">
+  <MainHead {title} />
+  <body>
+    <Navbar />
+    <main>
+      <slot/>
+    </main>
+  </body>
+</html>
