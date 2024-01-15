@@ -18,7 +18,7 @@ import navbarItem from "../data/navData";
         <div class="flex flex-row h-28 items-center justify-between p-4">
           <a
             href="#"
-            class="text-Blanc text-4xl tracking-widest font-argenExtra uppercase rounded-lg"
+            class="text-Blanc text-4xl md:text-5xl tracking-widest font-argenExtra uppercase rounded-lg"
             >Tusha<span class="text-principal">r</span></a
           >
         </div>
@@ -28,7 +28,7 @@ import navbarItem from "../data/navData";
           {
             Object.values(navbarItem).map((item) => (
               <a
-                class="text-Blanc px-4 py-2 mt-2 text-lg font-argenMed rounded-lg md:mt-0 md:ml-4 "
+                class="text-Blanc px-4 py-2 mt-2 text-xl font-argenMed rounded-lg md:mt-0 md:ml-4 "
                 href={item.link}
               >
                 {item.label}
