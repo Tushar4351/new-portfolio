@@ -7,12 +7,17 @@ const { title = "Tushar Bhowal" } = Astro.props;
 import {NavbarItem} from "../data/navData"
 //navber variables
 
+//Stytle css
+import "../styles/global.css";
 ---
 
 <html lang="en">
   <MainHead {title} />
   <body>
-    <Navbar />
+    <div class="px-4">
+      <Navbar />
+    </div>
+    
     <main>
       <slot/>
     </main>
