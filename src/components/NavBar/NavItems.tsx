@@ -1,4 +1,4 @@
-import navbarItem from "../data/navData";
+import navbarItem from "../../data/navData";
 
 const NavItems = () => {
   return (
