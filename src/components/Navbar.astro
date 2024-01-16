@@ -1,41 +1,38 @@
 ---
-// library imports
-import { Image } from "astro:assets";
-
-// component imports
-import ProfileLogo from "../../public/images/Tushar.png";
-//Data import
-import navbarItem from "../data/navData";
-//data initialization
+// Data import
+import NavItems from "./NavItems";
+import NavClick from "./NavClick";
+// Data initialization
 ---
 
 <div class="min-h-screen">
   <div class="antialiased">
     <div class="w-full">
       <div
-        class="bg-black1 flex flex-col rounded-3xl max-w-screen-xll px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+        class="bg-black1 flex rounded-3xl max-w-screen-xll px-4 mx-auto items-center justify-between md:flex-row md:px-6 lg:px-8"
       >
         <div class="flex flex-row h-28 items-center justify-between p-4">
           <a
             href="#"
-            class="text-Blanc text-4xl md:text-5xl tracking-widest font-argenExtra uppercase rounded-lg"
-            >Tusha<span class="text-principal">r</span></a
+            class="text-Blanc text-2xl sm:text-4xl md:text-5xl tracking-widest font-argenExtra uppercase rounded-lg"
           >
+            Tusha<span class="text-principal">r</span>
+          </a>
         </div>
-        <nav
-          class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
-        >
-          {
-            Object.values(navbarItem).map((item) => (
-              <a
-                class="text-Blanc px-4 py-2 mt-2 text-xl font-argenMed rounded-lg md:mt-0 md:ml-4 "
-                href={item.link}
-              >
-                {item.label}
-              </a>
-            ))
-          }
-        </nav>
+
+        {
+          /* NavClick is rendered only when the client width is less than 1024px */
+        }
+        <div class="lg:hidden">
+          <NavClick client:media="(max-width: 1023px)" />
+        </div>
+
+        {
+          /* NavItems is rendered only when the client width is greater than or equal to 1024px */
+        }
+        <div class="hidden lg:block">
+          <NavItems client:media="(min-width: 1024px)" />
+        </div>
       </div>
     </div>
   </div>
