@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import progilePic from "../../../public/images/Profile.jpg";
+---
+
+<div class="flex max-w-screen-xll mx-auto items-center justify-between">
+  <div class="flex flex-row">
+    <div class="flex flex-col w-2/3 gap-4">
+      <div class="h-4/5 bg-black1 rounded-2xl">
+        <!-- Your content goes here -->
+      </div>
+      <div class="h-1/5 bg-black1 rounded-2xl">
+        <!-- Your content goes here -->
+      </div>
+    </div>
+    <div class="w-1/2 pl-4 rounded-xl">
+      <Image src={progilePic} alt="Tushar's profile Pic" class="rounded-2xl h-full" />
+    </div>
+  </div>
+</div>
+
+
+<!-- <style>
+  .gradient-container {
+    background: linear-gradient(-45deg, #db937d, #f5a2c2, #e79670, #7edbc6);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style> -->

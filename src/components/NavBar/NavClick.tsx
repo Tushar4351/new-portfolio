@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
-import navbarItem from "../../data/navData"
+import navbarItem from "../../data/navData";
 
 const NavClick: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const NavClick: React.FC = () => {
 
   const animateNav = () => {
     navControl.start({
-      height: isMenuOpen ? 0 : "auto",
+      height: isMenuOpen ? "auto" : 0,
       opacity: isMenuOpen ? 0 : 1,
       transition: {
         duration: 0.5,
@@ -31,8 +31,12 @@ const NavClick: React.FC = () => {
   };
 
   return (
-    <nav className="bg-black text-red-500 p-4">
-      <div className="flex justify-end">
+    <nav
+      className={`fixed inset-0 z-50 ${
+        isMenuOpen ? "bg-black1" : ""
+      } text-red-500 p-8 `}
+    >
+      <div className="flex ml-10 justify-end">
         <motion.div
           animate={iconControl}
           initial={{ opacity: 1 }}
@@ -48,7 +52,12 @@ const NavClick: React.FC = () => {
       </div>
 
       <motion.ul
-        className=""
+        //className="absolute left-0 right-0"
+        className={`absolute left-0 right-0 ${
+          isMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
         animate={navControl}
         initial={{ height: 0, opacity: 0 }}
       >
@@ -56,7 +65,7 @@ const NavClick: React.FC = () => {
           <li
             key={index}
             className={`mb-10 ${
-              item.label === "Home" ? "bg-principal" : ""
+              item.label === "Contact" ? "bg-principal" : ""
             } text-center rounded-full p-4`}
           >
             <a
