@@ -1,23 +1,23 @@
 ---
 import { Image } from "astro:assets";
-import progilePic from "../../../public/images/Profile.jpg";
+import profilePic from "../../../public/images/Profile.jpg";
 ---
 
 <div class="flex max-w-screen-xll mx-auto items-center justify-between">
-  <div class="flex flex-row">
-    <div class="flex flex-col w-2/3 gap-4">
+  <div class="flex flex-col gap-4 md:flex-row">
+    <div class="flex flex-col md:w-2/3 gap-4">
       <div class="h-4/5 bg-black1 rounded-2xl">
-        <div class="flex flex-col p-10 mt-10 gap-14">
-          <h1 class="text-Blanc font-argenBold text-7xl">
+        <div class="flex flex-col p-7 sm:p-10 mt-10 gap-14">
+          <h1 class="text-Blanc font-argenBold text-4xl sm:text-5xl md:text-7xl">
             I’m Tushar Bhowal - <span class="text-principal">Web Developer</span
             >
           </h1>
-          <h2 class="text-gray1 font-argenMed text-xl">
+          <h2 class="text-gray1 font-argenMed text-base sm:text-xl">
             I care a lot about using my development skills for positive impact.
             and enjoy creating user-centric, delightful, and human experiences.
           </h2>
         </div>
-        <div class="flex flex-row p-10 mt-10 gap-10">
+        <div class="flex flex-row p-5 xxsm:p-7 sm:p-10 mt-10 gap-7 sm:gap-10">
           <a
             href="#_"
             class="relative inline-flex items-center justify-start px-7 py-3 overflow-hidden font-medium transition-all bg-principal rounded-full hover:bg-Blanc group"
@@ -26,13 +26,13 @@ import progilePic from "../../../public/images/Profile.jpg";
               class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-Blanc rounded-full"
             ></span>
             <span
-              class="relative w-full text-left text-xl transition-colors duration-200 ease-in-out group-hover:text-principal"
-              >Download CV</span
+              class="relative w-full text-left text-sm sm:text-xl transition-colors duration-200 ease-in-out group-hover:text-principal"
+              >Download <span class="download ">CV </span></span
             >
           </a>
           <a
             href="#_"
-            class="relative inline-flex items-center justify-center p-4 px-12 py-3 overflow-hidden font-medium text-Blanc transition duration-300 ease-out border-2 border-principal rounded-full shadow-md group"
+            class="relative inline-flex items-center justify-center p-4 sm:px-12 py-3 overflow-hidden font-medium text-Blanc transition duration-300 ease-out border-2 border-principal rounded-full shadow-md group"
           >
             <span
               class="absolute inset-0 flex items-center justify-center w-full h-full text-Blanc duration-300 -translate-x-full bg-principal group-hover:translate-x-0 ease"
@@ -51,25 +51,25 @@ import progilePic from "../../../public/images/Profile.jpg";
               >
             </span>
             <span
-              class="absolute flex items-center justify-center w-full h-full text-Blanc text-xl transition-all duration-300 transform group-hover:translate-x-full ease"
-              >Let's Chat</span
+              class="absolute flex items-center justify-center w-full h-full text-Blanc text-sm sm:text-xl transition-all duration-300 transform group-hover:translate-x-full ease"
+              ><span class="download ">Let's </span>Chat</span
             >
             <span class="relative invisible">Let's Chat</span>
           </a>
         </div>
       </div>
-      <div class="h-1/5 bg-black1 rounded-2xl social-icons">
+      <div class="bg-black1 rounded-2xl social-icons">
         <div class="flex flex-row gap-10 justify-center p-6">
-          <i class="fa-brands fa-facebook text-8xl text-principal"></i>
-          <i class="fa-brands fa-square-instagram text-8xl text-principal"></i>
-          <i class="fa-brands fa-linkedin text-8xl text-principal"></i>
-          <i class="fa-brands fa-github text-8xl text-principal"></i>
+          <i class="fa-brands fa-facebook text-3xl xxsm:text-5xl sm:text-8xl text-principal"></i>
+          <i class="fa-brands fa-square-instagram text-3xl xxsm:text-5xl sm:text-8xl text-principal"></i>
+          <i class="fa-brands fa-linkedin text-3xl xxsm:text-5xl sm:text-8xl text-principal"></i>
+          <i class="fa-brands fa-github text-3xl xxsm:text-5xl sm:text-8xl text-principal"></i>
         </div>
       </div>
     </div>
-    <div class="w-1/2 pl-4 rounded-xl">
+    <div class="md:w-1/2 rounded-xl">
       <Image
-        src={progilePic}
+        src={profilePic}
         alt="Tushar's profile Pic"
         class="rounded-2xl h-full"
       />
@@ -113,5 +113,17 @@ import progilePic from "../../../public/images/Profile.jpg";
 
   .social-icons i:hover {
     transform: scale(1.2); /* Adjust the scale factor as needed */
+  }
+  @media only screen and (min-width: 200px) and (max-width: 365px) {
+    .download {
+      display: none;
+    }
+  }
+
+
+  @media only screen and (min-width: 100px) and (max-width: 390px) {
+    .download {
+      display: none;
+    }
   }
 </style>
