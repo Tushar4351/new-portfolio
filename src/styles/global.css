@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-    font-family:"ArgentumSans-ExtraBold" ;
-    src: url(/fonts/argentum-sans/ArgentumSans-ExtraBold.ttf);
+  font-family: "ArgentumSans-ExtraBold";
+  src: url(/fonts/argentum-sans/ArgentumSans-ExtraBold.ttf);
 }
 @font-face {
-    font-family:"ArgentumSans-Bold" ;
-    src: url(/fonts/argentum-sans/ArgentumSans-Bold.ttf);
+  font-family: "ArgentumSans-Bold";
+  src: url(/fonts/argentum-sans/ArgentumSans-Bold.ttf);
 }
 @font-face {
-    font-family:"ArgentumSans-Medium" ;
-    src: url(/fonts/argentum-sans/ArgentumSans-Medium.ttf);
+  font-family: "ArgentumSans-Medium";
+  src: url(/fonts/argentum-sans/ArgentumSans-Medium.ttf);
 }
-
+@font-face {
+  font-family: "ArgentumSans-SemiBold";
+  src: url(/fonts/argentum-sans/ArgentumSans-SemiBold.ttf);
+}

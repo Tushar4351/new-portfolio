@@ -7,18 +7,75 @@ import progilePic from "../../../public/images/Profile.jpg";
   <div class="flex flex-row">
     <div class="flex flex-col w-2/3 gap-4">
       <div class="h-4/5 bg-black1 rounded-2xl">
-        <!-- Your content goes here -->
+        <div class="flex flex-col p-10 mt-10 gap-14">
+          <h1 class="text-Blanc font-argenBold text-7xl">
+            I’m Tushar Bhowal - <span class="text-principal">Web Developer</span
+            >
+          </h1>
+          <h2 class="text-gray1 font-argenMed text-xl">
+            I care a lot about using my development skills for positive impact.
+            and enjoy creating user-centric, delightful, and human experiences.
+          </h2>
+        </div>
+        <div class="flex flex-row p-10 mt-10 gap-10">
+          <a
+            href="#_"
+            class="relative inline-flex items-center justify-start px-7 py-3 overflow-hidden font-medium transition-all bg-principal rounded-full hover:bg-Blanc group"
+          >
+            <span
+              class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-Blanc rounded-full"
+            ></span>
+            <span
+              class="relative w-full text-left text-xl transition-colors duration-200 ease-in-out group-hover:text-principal"
+              >Button Text</span
+            >
+          </a>
+          <a
+            href="#_"
+            class="relative inline-flex items-center justify-center p-4 px-12 py-3 overflow-hidden font-medium text-Blanc transition duration-300 ease-out border-2 border-principal rounded-full shadow-md group"
+          >
+            <span
+              class="absolute inset-0 flex items-center justify-center w-full h-full text-Blanc duration-300 -translate-x-full bg-principal group-hover:translate-x-0 ease"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg
+              >
+            </span>
+            <span
+              class="absolute flex items-center justify-center w-full h-full text-Blanc text-xl transition-all duration-300 transform group-hover:translate-x-full ease"
+              >Let's Chat</span
+            >
+            <span class="relative invisible">Let's Chat</span>
+          </a>
+        </div>
       </div>
-      <div class="h-1/5 bg-black1 rounded-2xl">
-        <!-- Your content goes here -->
+      <div class="h-1/5 bg-black1 rounded-2xl social-icons">
+        <div class="flex flex-row gap-10 justify-center p-6">
+          <i class="fa-brands fa-facebook text-8xl text-principal"></i>
+          <i class="fa-brands fa-square-instagram text-8xl text-principal"></i>
+          <i class="fa-brands fa-linkedin text-8xl text-principal"></i>
+          <i class="fa-brands fa-github text-8xl text-principal"></i>
+        </div>
       </div>
     </div>
     <div class="w-1/2 pl-4 rounded-xl">
-      <Image src={progilePic} alt="Tushar's profile Pic" class="rounded-2xl h-full" />
+      <Image
+        src={progilePic}
+        alt="Tushar's profile Pic"
+        class="rounded-2xl h-full"
+      />
     </div>
   </div>
 </div>
-
 
 <!-- <style>
   .gradient-container {
@@ -39,3 +96,22 @@ import progilePic from "../../../public/images/Profile.jpg";
     }
   }
 </style> -->
+<style>
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding: 6px;
+  }
+
+  .social-icons i {
+    font-size: 8xl;
+    color: #your-desired-color; /* Replace with your desired color */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .social-icons i:hover {
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+  }
+</style>

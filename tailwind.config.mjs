@@ -7,7 +7,7 @@ export default {
       black1: "#343434",
       principal: "#ffa97a",
       Blanc: "#fcfafa",
-      gray1: "#484848",
+      gray1: "#C5C6D0",
       pink1: "#DE3163",
       green1: "#aac402",
     },
@@ -16,6 +16,7 @@ export default {
       argenExtra: ["ArgentumSans-ExtraBold"],
       argenBold: ["ArgentumSans-Bold"],
       argenMed: ["ArgentumSans-Medium"],
+      argenSemiBold: ["ArgentumSans-SemiBold"],
     },
     extend: {
       screens: {
