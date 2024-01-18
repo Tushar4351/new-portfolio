@@ -3,6 +3,8 @@
 import MainHead from "./MainHead.astro";
 import Navbar from "../components/Navbar/Navbar.astro";
 import Home from "../components/Home/Home.astro";
+import About from "../components/About/About.astro";
+
 const { title = "Tushar Bhowal" } = Astro.props;
 //Data import
 
@@ -19,11 +21,14 @@ import "../styles/global.css";
       <Navbar />
     </div>
     <div class="p-4">
-      <Home/>
+      <Home />
     </div>
-   
+    <div class="px-4">
+      <About />
+    </div>
+
     <main>
-      <slot/>
+      <slot />
     </main>
   </body>
 </html>
