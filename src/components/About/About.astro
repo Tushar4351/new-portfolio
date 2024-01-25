@@ -1,5 +1,13 @@
 ---
 import AboutCarousel from "./AboutCarousel.tsx";
+
+// Example usage:
+const slideImages = [
+  "../../../images/Profile.jpg",
+  "../../../images/SnakeGame.png",
+  "../../../images/TinDog.png",
+  // Add more slide images as needed
+];
 ---
 
 <div class="">
@@ -15,7 +23,7 @@ import AboutCarousel from "./AboutCarousel.tsx";
     </div>
   </div>
   <div
-    class="bg-black1 flex rounded-3xl max-w-screen-xll mt-4 mx-auto items-center justify-between md:px-6 lg:px-8"
+    class="bg-black1 flex flex-col rounded-3xl max-w-screen-xll mt-4 p-10 mx-auto items-center justify-between md:px-6 lg:px-8"
   >
     <div class="text-gray1 font-argenMed text-base sm:text-xl">
       <h3>
@@ -27,9 +35,9 @@ import AboutCarousel from "./AboutCarousel.tsx";
         impact in software engineering.
       </h3>
     </div>
-    <div>
-      <AboutCarousel />
+    <div class="w-full ">
+      <AboutCarousel client:load/>
     </div>
   </div>
 </div>
-./AboutCarousel.tsx
+
