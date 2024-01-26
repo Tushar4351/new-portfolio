@@ -1,0 +1,8 @@
+.swiper-button-next::after {
+  color: rgb(31, 30, 30);
+ 
+  background: #ffa97a;
+  padding: 1vw;
+  width: 10vw;
+  border-radius: 100%;
+}

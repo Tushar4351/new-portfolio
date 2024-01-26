@@ -8,12 +8,12 @@ import NavClick from "./NavClick";
 
 <div class="w-full">
   <div
-    class="bg-black1 flex rounded-3xl max-w-screen-xll px-4 mx-auto items-center justify-between md:flex-row md:px-6 lg:px-8"
+    class="flex rounded-3xl max-w-screen-xll mx-auto items-center justify-between md:flex-row"
   >
-    <div class="flex flex-row h-28 items-center justify-between p-4">
+    <div class="flex flex-row h-28 items-center">
       <a
         href="#"
-        class="text-Blanc text-2xl sm:text-4xl md:text-5xl tracking-widest font-argenExtra uppercase rounded-lg"
+        class="text-black1 text-2xl sm:text-4xl md:text-5xl tracking-widest font-argenExtra uppercase rounded-lg"
       >
         Tusha<span class="text-principal">r</span>
       </a>
@@ -32,3 +32,14 @@ import NavClick from "./NavClick";
     </div>
   </div>
 </div>
+
+
+<style>
+  .text-black1 {
+    transition: font-size 0.5s ease; /* Adjust the duration and easing function as needed */
+  }
+
+  .text-black1:hover {
+    font-size: 3.1rem; /* Adjust the size as needed */
+  }
+</style>

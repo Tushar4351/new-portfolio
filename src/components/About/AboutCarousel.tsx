@@ -1,43 +1,36 @@
-import {useState } from "react";
 import { Virtual, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import AboutItem from "../../data/aboutData";
+import "./About.css"
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const AboutCarousel = () => {
-
-  // Create array with 500 slides
-  const [slides, setSlides] = useState(
-    Array.from({ length: 500 }).map((_, index) => `Slide ${index + 1}`)
-  );
-
   return (
     <>
       <Swiper
         modules={[Virtual, Navigation, Pagination]}
-        slidesPerView={3}
+        slidesPerView={2} // Set the number of slides per view
         centeredSlides={true}
         spaceBetween={30}
         navigation={true}
         virtual
-        className="w-full mx-auto h-80 swiper"
+        className="w-full mx-auto h-80"
       >
-        {slides.map(
-          (
-            slideContent,
-            index: number // Explicitly type index
-          ) => (
-            <SwiperSlide
-              key={slideContent}
-              virtualIndex={index}
-              className="rounded-full text-center text-18 bg-Blanc flex justify-center items-center swiper-slide"
-            >
-              {slideContent}
-            </SwiperSlide>
-          )
-        )}
+        {Object.values(AboutItem).map((aboutItem, index) => (
+          <SwiperSlide
+            key={index}
+            virtualIndex={index}
+            className="rounded-full text-center text-18 bg-Blanc flex justify-center items-center"
+          >
+            <div> {/* Set the width here */}
+              <h1>{aboutItem.title}</h1>
+              <h4>{aboutItem.description}</h4>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

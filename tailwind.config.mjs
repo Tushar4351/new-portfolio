@@ -10,6 +10,7 @@ export default {
       gray1: "#C5C6D0",
       pink1: "#DE3163",
       green1: "#aac402",
+      black2: "#000000",
     },
 
     fontFamily: {
@@ -20,7 +21,7 @@ export default {
     },
     extend: {
       screens: {
-        xxsm:"390px",
+        xxsm: "390px",
         xsm: "450px",
         xll: "1380px",
       },

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
-import navbarItem from "../../data/navData";
+import { navbarItem1 } from "../../data/navData";
 
 const NavClick: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,7 +61,7 @@ const NavClick: React.FC = () => {
         animate={navControl}
         initial={{ height: 0, opacity: 0 }}
       >
-        {Object.values(navbarItem).map((item, index) => (
+        {Object.values(navbarItem1).map((item, index) => (
           <li
             key={index}
             className={`mb-10 ${
