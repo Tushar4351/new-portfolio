@@ -7,7 +7,7 @@ export default {
       black1: "#343434",
       principal: "#ffa97a",
       Blanc: "#fcfafa",
-      gray1: "#C5C6D0",
+      gray1: "#E0E0E0",
       pink1: "#DE3163",
       green1: "#aac402",
       black2: "#000000",
