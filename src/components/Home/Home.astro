@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import profilePic from "../../../public/images/Profile.jpg";
 ---
 
-<div class="flex max-w-screen-xll mx-auto items-center justify-between">
+<!-- <div class="flex max-w-screen-xll mx-auto items-center justify-between">
   <div class="flex flex-col gap-4 md:flex-row">
     <div class="flex flex-col md:w-2/3 gap-4">
       <div class="h-4/5 bg-black1 rounded-2xl">
@@ -75,28 +75,150 @@ import profilePic from "../../../public/images/Profile.jpg";
       />
     </div>
   </div>
+</div> -->
+
+<div class="background">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+
 </div>
 
-<!-- <style>
-  .gradient-container {
-    background: linear-gradient(-45deg, #db937d, #f5a2c2, #e79670, #7edbc6);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-</style> -->
+
+
 <style>
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #beb9c5;
+    overflow: hidden;
+}
+
+.background span {
+    width: 29vmin;
+    height: 29vmin;
+    border-radius: 29vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 45;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+    color: #ecbb51;
+    top: 95%;
+    left: 24%;
+    animation-duration: 13s;
+    animation-delay: -14s;
+    transform-origin: 22vw -24vh;
+    box-shadow: 58vmin 0 8.163580788258113vmin currentColor;
+}
+.background span:nth-child(1) {
+    color: #ecbb51;
+    top: 81%;
+    left: 27%;
+    animation-duration: 42s;
+    animation-delay: -26s;
+    transform-origin: -1vw -10vh;
+    box-shadow: 58vmin 0 7.716739332157978vmin currentColor;
+}
+.background span:nth-child(2) {
+    color: #ecbb51;
+    top: 26%;
+    left: 34%;
+    animation-duration: 54s;
+    animation-delay: -6s;
+    transform-origin: 7vw -18vh;
+    box-shadow: 58vmin 0 7.741065382748256vmin currentColor;
+}
+.background span:nth-child(3) {
+    color: #ecbb51;
+    top: 21%;
+    left: 31%;
+    animation-duration: 30s;
+    animation-delay: -12s;
+    transform-origin: 15vw -4vh;
+    box-shadow: 58vmin 0 8.056477831197785vmin currentColor;
+}
+.background span:nth-child(4) {
+    color: #8859d9;
+    top: 58%;
+    left: 84%;
+    animation-duration: 46s;
+    animation-delay: -45s;
+    transform-origin: 1vw 5vh;
+    box-shadow: 58vmin 0 7.434087423513962vmin currentColor;
+}
+.background span:nth-child(5) {
+    color: #e34a4a;
+    top: 28%;
+    left: 45%;
+    animation-duration: 54s;
+    animation-delay: -31s;
+    transform-origin: -2vw 6vh;
+    box-shadow: -58vmin 0 7.779624393219194vmin currentColor;
+}
+.background span:nth-child(6) {
+    color: #e34a4a;
+    top: 92%;
+    left: 12%;
+    animation-duration: 31s;
+    animation-delay: -27s;
+    transform-origin: 8vw 11vh;
+    box-shadow: 58vmin 0 7.459725159827212vmin currentColor;
+}
+.background span:nth-child(7) {
+    color: #e34a4a;
+    top: 15%;
+    left: 18%;
+    animation-duration: 29s;
+    animation-delay: -1s;
+    transform-origin: -2vw -19vh;
+    box-shadow: -58vmin 0 7.922198623692331vmin currentColor;
+}
+.background span:nth-child(8) {
+    color: #8859d9;
+    top: 36%;
+    left: 81%;
+    animation-duration: 24s;
+    animation-delay: -16s;
+    transform-origin: -3vw 10vh;
+    box-shadow: -58vmin 0 7.382015095289545vmin currentColor;
+}
+.background span:nth-child(9) {
+    color: #e34a4a;
+    top: 2%;
+    left: 68%;
+    animation-duration: 42s;
+    animation-delay: -32s;
+    transform-origin: 3vw 10vh;
+    box-shadow: -58vmin 0 7.613277252853766vmin currentColor;
+}
+
+</style>
+
+
+<!-- <style>
   .social-icons {
     display: flex;
     flex-direction: row;
@@ -126,4 +248,4 @@ import profilePic from "../../../public/images/Profile.jpg";
       display: none;
     }
   }
-</style>
+</style> -->
