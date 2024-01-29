@@ -4,22 +4,22 @@ import profilePic from "../../../public/images/Profile.jpg";
 ---
 
 <div class="flex max-w-screen-xll mx-auto items-center justify-between">
-  <div class="flex flex-col gap-4 md:flex-row">
-    <div class="flex flex-col md:w-2/3 gap-4 outer-div">
+  <div class="flex flex-col gap-4 lg:flex-row">
+    <div class="flex flex-col gap-4 outer-div">
       <div
-        class="h-5/6 xxsm:h-full bg-gray1 rounded-2xl outer-div relative overflow-hidden"
+        class="lg:h-full bg-gray1 rounded-2xl outer-div relative overflow-hidden"
       >
         <div class="circle1"></div>
         <div class="circle2"></div>
         <div class="flex flex-col p-7 sm:p-10 mt-10 gap-14">
           <h1
-            class="text-black1 font-argenBold text-4xl sm:text-5xl md:text-7xl"
+            class="text-black1 text-upper font-argenBold text-4xl sm:text-6xl md:text-7xl"
           >
             I’m Tushar Bhowal A- <span class="text-principal"
               >Full Stack Web Developer</span
             >
           </h1>
-          <h2 class="text-black1 font-argenMed text-base sm:text-xl pr-24">
+          <h2 class="text-black1 font-argenMed text-base sm:text-xl xxsm:pr-24">
             I care a lot about using my development skills for positive impact,
             and enjoy creating user-centric, delightful, and human experiences.
           </h2>
@@ -56,11 +56,11 @@ import profilePic from "../../../public/images/Profile.jpg";
         </div>
       </div>
     </div>
-    <div class="md:w-1/2 rounded-xl">
+    <div class="lg:w-1/2 rounded-xl">
       <Image
         src={profilePic}
         alt="Tushar's profile Pic"
-        class="rounded-2xl h-5/6 xxsm:h-full"
+        class="rounded-2xl lg:h-full "
       />
     </div>
   </div>
@@ -95,7 +95,6 @@ import profilePic from "../../../public/images/Profile.jpg";
     width: 250px;
     top: -80px;
     right: -150px;
-    z-index: 1;
     animation-name: glowAndFade2;
   }
 
@@ -184,4 +183,11 @@ import profilePic from "../../../public/images/Profile.jpg";
       text-align: center;
     }
   }
+
+
+  @media screen and (min-width: 1024px) and (max-width: 1080px) {
+  .text-upper {
+    font-size: 3rem;
+  }
+}
 </style>

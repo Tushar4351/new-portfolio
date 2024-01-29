@@ -1,6 +1,8 @@
+import AboutItem from "../../data/aboutData";
+
 import { Virtual, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import AboutItem from "../../data/aboutData";
+
 import "./About.css"
 // Import Swiper styles
 import "swiper/css";
@@ -10,7 +12,7 @@ import "swiper/css/navigation";
 const AboutCarousel = () => {
   return (
     <>
-      <Swiper
+    <Swiper
         modules={[Virtual, Navigation, Pagination]}
         slidesPerView={2} // Set the number of slides per view
         centeredSlides={true}
@@ -25,15 +27,17 @@ const AboutCarousel = () => {
             virtualIndex={index}
             className="rounded-full text-center text-18 bg-Blanc flex justify-center items-center"
           >
-            <div> {/* Set the width here */}
-              <h1>{aboutItem.title}</h1>
-              <h4>{aboutItem.description}</h4>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+             <div> 
+               <h1>{aboutItem.title}</h1>
+               <h4>{aboutItem.description}</h4>
+             </div>
+           </SwiperSlide>
+       ))}
+     </Swiper>
     </>
   );
 };
 
 export default AboutCarousel;
+
+

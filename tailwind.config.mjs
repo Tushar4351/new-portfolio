@@ -3,6 +3,7 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     colors: {
+      white1: "#fff",
       purple: "#7e5bef",
       black1: "#343434",
       principal: "#ffa97a",
@@ -23,7 +24,11 @@ export default {
       screens: {
         xxsm: "390px",
         xsm: "450px",
-        xll: "1480px",
+        xsl: "1280px",
+        xll: "1580px",
+      },
+      fontSize: {
+        xl10: "10rem",
       },
     },
   },
