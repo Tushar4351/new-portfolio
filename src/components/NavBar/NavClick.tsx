@@ -1,28 +1,22 @@
 import React, { useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, MotionConfig } from "framer-motion";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import { navbarItem1 } from "../../data/navData";
+import VARIANTS from "../../data/navClickVariants";
 
 const NavClick: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const iconControl = useAnimation();
+  const [active, setActive] = useState(false);
   const navControl = useAnimation();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setActive((prevActive) => !prevActive);
     animateNav();
-  };
-
-  const switchIcon = async () => {
-    await iconControl.start({ opacity: 0 });
-    toggleMenu();
-    await iconControl.start({ opacity: 1 });
   };
 
   const animateNav = () => {
     navControl.start({
-      height: isMenuOpen ? "auto" : 0,
-      opacity: isMenuOpen ? 0 : 1,
+      height: active ? "auto" : 0,
+      opacity: active ? 0 : 1,
       transition: {
         duration: 0.5,
         ease: "easeInOut",
@@ -31,30 +25,49 @@ const NavClick: React.FC = () => {
   };
 
   return (
-    <nav
-      className={`fixed inset-0 z-50 ${
-        isMenuOpen ? "bg-black1" : ""
-      } text-red-500 p-8 `}
-    >
-      <div className="flex ml-10 justify-end">
-        <motion.div
-          animate={iconControl}
-          initial={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          onClick={switchIcon}
+    <div className={` ${active ? "bg-black1 fixed inset-0 z-50 p-6" : ""} `}>
+      <motion.div className="flex justify-end">
+        <MotionConfig
+          transition={{
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
         >
-          {isMenuOpen ? (
-            <IoIosClose size={70} color="white" />
-          ) : (
-            <IoIosMenu size={50} color="white" />
-          )}
-        </motion.div>
-      </div>
+          <motion.button
+            initial={false}
+            animate={active ? "open" : "closed"}
+            onClick={toggleMenu}
+            className={`${
+              active ? "" : ""
+            } relative  h-16 w-16 rounded-full bg-principal`}
+          >
+            <motion.span
+              variants={VARIANTS.top}
+              className="absolute h-1 w-8 bg-Blanc"
+              style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
+            />
+            <motion.span
+              variants={VARIANTS.middle}
+              className="absolute h-1 w-8 bg-Blanc"
+              style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
+            />
+            <motion.span
+              variants={VARIANTS.bottom}
+              className="absolute h-1 w-3 bg-Blanc"
+              style={{
+                x: "-50%",
+                y: "50%",
+                bottom: "35%",
+                left: "calc(50% + 10px)",
+              }}
+            />
+          </motion.button>
+        </MotionConfig>
+      </motion.div>
 
       <motion.ul
-        //className="absolute left-0 right-0"
         className={`absolute left-0 right-0 ${
-          isMenuOpen
+          active
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
@@ -77,7 +90,7 @@ const NavClick: React.FC = () => {
           </li>
         ))}
       </motion.ul>
-    </nav>
+    </div>
   );
 };
 
