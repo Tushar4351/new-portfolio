@@ -26,6 +26,7 @@ const NavItems = () => {
 
   return (
     <>
+    
       <AnimatePresence>
         {isScrollPast ? <NavbarFixed key="navbar-fixed" /> : <NavbarDefault />}
       </AnimatePresence>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { navbarItem2 } from "../../data/navData";
+import { navbarItem2 } from "../../../data/navData"
 
 const navVariants = {
   initial: {
