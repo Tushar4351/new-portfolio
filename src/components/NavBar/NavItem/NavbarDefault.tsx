@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { navbarItem1 } from "../../../data/navData"
+import { navbarItem1 } from "../../../data/navData";
 import { motion } from "framer-motion";
 function NavbarDefault() {
   const initialActiveIndex = 0; // Set the initial active index
@@ -37,14 +37,18 @@ function NavbarDefault() {
         ))}
       </ul>
 
-      <div>
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
         <a
           href={navbarItem1.contact.link}
           className="font-argenMed px-8 py-4 rounded-2xl text-Blanc bg-black1"
         >
           {navbarItem1.contact.label}
         </a>
-      </div>
+      </motion.div>
     </nav>
   );
 }

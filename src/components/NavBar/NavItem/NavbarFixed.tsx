@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { navbarItem2 } from "../../../data/navData"
+import { navbarItem2 } from "../../../data/navData";
 
 const navVariants = {
   initial: {
@@ -33,7 +33,12 @@ function NavbarFixed() {
     >
       <ul className="flex items-center gap-2 text-Blanc font-argenMed">
         {navItems.map((item, index) => (
-          <li key={index}>
+          <motion.li
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            key={index}
+          >
             <a
               href={item.link}
               className={`px-10 py-6 text-xl hover:bg-Blanc hover:text-black2 hover:rounded-full ${
@@ -42,7 +47,7 @@ function NavbarFixed() {
             >
               {item.label}
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </motion.div>

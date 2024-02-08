@@ -20,3 +20,128 @@
   font-family: "ArgentumSans-SemiBold";
   src: url(/fonts/argentum-sans/ArgentumSans-SemiBold.ttf);
 }
+
+/* Home page css start */
+
+.circle1,
+.circle2 {
+  position: absolute;
+  border-radius: 100%;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  /* Initial glow effect */
+}
+
+.circle1 {
+  background: #7e5bef;
+  box-shadow: 0 0 20px 10px #7e5bef;
+  height: 250px;
+  width: 250px;
+  bottom: -150px;
+  left: -80px;
+  animation-name: glowAndFade1;
+}
+
+.circle2 {
+  background: #eb8817;
+  box-shadow: 0 0 20px 10px #eb8817;
+  height: 250px;
+  width: 250px;
+  top: -80px;
+  right: -150px;
+  animation-name: glowAndFade2;
+}
+
+.outer-div:hover .circle2 {
+  animation-name: moveUpDown, glowAndFade2;
+}
+.outer-div:hover .circle1 {
+  animation-name: glowAndFade1, moveRightLeft;
+}
+
+@keyframes moveRightLeft {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(540px);
+  }
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(540px);
+  }
+}
+@keyframes glowAndFade1 {
+  0%,
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px 10px #7e5bef; /* Initial glow effect */
+  }
+  25%,
+  75% {
+    box-shadow: 0 0 70px 70px #7e5bef; /* Larger glow effect on the sides */
+  }
+  0%,
+  100% {
+    animation-timing-function: linear; /* Adjust as needed */
+  }
+  25%,
+  75% {
+    animation-timing-function: ease-in-out; /* Adjust as needed */
+  }
+}
+
+@keyframes glowAndFade2 {
+  0%,
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px 10px #eb8817; /* Initial glow effect */
+  }
+  25%,
+  75% {
+   
+    box-shadow: 0 0 70px 70px #eb8817; /* Larger glow effect on the sides */
+  }
+  0%,
+  100% {
+    animation-timing-function: linear; /* Adjust as needed */
+  }
+  25%,
+  75% {
+    animation-timing-function: ease-in-out; /* Adjust as needed */
+  }
+}
+.social-icons i {
+  font-size: 8xl;
+ 
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2); /* Adjust the scale factor as needed */
+}
+
+@media only screen and (max-width: 495px) {
+  .button-container {
+    flex-direction: column;
+  }
+  .download {
+    text-align: center;
+  }
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1080px) {
+.text-upper {
+  font-size: 3rem;
+}
+}
+
+/*  Home page css End */

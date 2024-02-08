@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import VARIANTS from "../../data/navClickVariants";
+import VARIANTS from "../../../data/navClickVariants";
 import type { FC } from "react";
 
 interface AnimatedButtonProps {
@@ -9,14 +9,14 @@ interface AnimatedButtonProps {
 
 const AnimatedButton: FC<AnimatedButtonProps> = ({ active, toggleMenu }) => {
   return (
-    <motion.div className="flex justify-end">
+    <motion.div className="flex justify-end ">
       <motion.button
         initial={false}
         animate={active ? "open" : "closed"}
         onClick={toggleMenu}
         className={`${
-          active ? "" : ""
-        } relative  h-16 w-16 rounded-full bg-principal`}
+          active ? "rounded-full bg-principal" : "bg-black1"
+        } absolute cursor-pointer top-0 right-0 overflow-hidden h-16 w-16 rounded-full bg-transparent`}
       >
         <motion.span
           variants={VARIANTS.top}
