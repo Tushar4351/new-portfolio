@@ -9,6 +9,8 @@ type Animation = [
   { [key: string]: any }
 ][];
 
+//Creating the animation when navbar got clicked
+
 function useMenuAnimation(active: boolean): RefObject<HTMLDivElement> {
   const [scope, animate] = useAnimate();
 
@@ -40,6 +42,8 @@ function useMenuAnimation(active: boolean): RefObject<HTMLDivElement> {
 
   return scope;
 }
+
+//main part off the navClick 
 
 const NavClick: React.FC = () => {
   const [active, setActive] = useState(false);

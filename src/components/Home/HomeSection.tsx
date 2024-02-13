@@ -1,5 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
+
+//Separeate Homesection component to use Framer motion
+
 const HomeSection = () => {
   return (
     <div className="flex flex-col gap-4 outer-div ">
@@ -7,14 +8,12 @@ const HomeSection = () => {
         <div className="circle1"></div>
         <div className="circle2"></div>
         <div className="flex flex-col p-7 sm:p-10 mt-10 gap-14">
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+          <div
             className="text-black1 text-upper font-argenBold text-4xl sm:text-6xl md:text-7xl"
           >
             I’m Tushar Bhowal A-{" "}
             <span className="text-principal">Full Stack Web Developer</span>
-          </motion.div>
+          </div>
           <div className="text-black1 font-argenMed text-base sm:text-xl xxsm:pr-24">
             I care a lot about using my development skills for positive impact,
             and enjoy creating user-centric, delightful, and human experiences.

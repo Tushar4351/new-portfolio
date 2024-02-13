@@ -1,5 +1,7 @@
 import { navbarItem1 } from "../../../data/navData";
 
+//The Navbar datas 
+
 const MenuItem = () => {
   const navItems = Object.values(navbarItem1).slice(0, -2);
 

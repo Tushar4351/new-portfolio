@@ -7,6 +7,8 @@ interface AnimatedButtonProps {
   toggleMenu: () => void;
 }
 
+//Button Component
+
 const AnimatedButton: FC<AnimatedButtonProps> = ({ active, toggleMenu }) => {
   return (
     <motion.div className="flex justify-end ">
